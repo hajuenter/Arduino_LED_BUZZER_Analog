@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "author": "ACH. BAHRUL MA'ARIP",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 183, "left": -0.6, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -80.4,
+      "left": -44.2,
+      "attrs": { "color": "red" }
+    },
+    { "type": "wokwi-led", "id": "led2", "top": -80.4, "left": 71, "attrs": { "color": "green" } },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -80.4,
+      "left": 167,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led4",
+      "top": -80.4,
+      "left": 263,
+      "attrs": { "color": "white" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 14.4,
+      "left": -10.15,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 14.4,
+      "left": 105.05,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 14.4,
+      "left": 297.05,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4",
+      "top": 14.4,
+      "left": 201.05,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -7.2,
+      "left": 405,
+      "attrs": { "volume": "0.1" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 209.9, "left": 355, "attrs": {} }
+  ],
+  "connections": [
+    [ "led1:C", "uno:GND.1", "black", [ "v144", "h144.1" ] ],
+    [ "led2:C", "uno:GND.1", "black", [ "v144", "h28.9" ] ],
+    [ "led3:C", "uno:GND.1", "black", [ "v144", "h-67.1" ] ],
+    [ "led4:C", "uno:GND.1", "black", [ "v144", "h-163.1" ] ],
+    [ "led1:A", "r1:1", "red", [ "v0" ] ],
+    [ "led2:A", "r2:1", "green", [ "v0" ] ],
+    [ "led3:A", "r4:1", "gold", [ "v28.8", "h38.4" ] ],
+    [ "led4:A", "r3:1", "white", [ "v0" ] ],
+    [ "r1:2", "uno:13", "red", [ "v104.4", "h105.2" ] ],
+    [ "r2:2", "uno:12", "green", [ "v66", "h-0.5" ] ],
+    [ "r4:2", "uno:11", "yellow", [ "v104.4", "h-87" ] ],
+    [ "r3:2", "uno:10", "white", [ "v114", "h-173.5" ] ],
+    [ "bz1:1", "uno:GND.1", "black", [ "v28.8", "h-317.1" ] ],
+    [ "bz1:2", "uno:9", "cyan", [ "v96", "h-279.6" ] ],
+    [ "pot1:GND", "uno:GND.2", "black", [ "v115.2", "h-215.1" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v124.8", "h-186.6" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v134.4", "h-244.6" ] ]
+  ],
+  "dependencies": {}
+}
