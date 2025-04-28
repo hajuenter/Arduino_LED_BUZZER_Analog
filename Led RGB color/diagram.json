@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "ACH. BAHRUL MA'ARIP",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 173.4, "left": -87, "attrs": {} },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": 23.2,
+      "left": 29.9,
+      "attrs": { "common": "cathode" }
+    }
+  ],
+  "connections": [
+    [ "rgb1:COM", "uno:GND.1", "black", [ "h-19.1", "v105.2" ] ],
+    [ "rgb1:R", "uno:13", "red", [ "v0" ] ],
+    [ "rgb1:G", "uno:12", "green", [ "v0" ] ],
+    [ "rgb1:B", "uno:11", "blue", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
